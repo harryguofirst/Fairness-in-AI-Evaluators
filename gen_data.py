@@ -62,7 +62,7 @@ def main():
     import pandas as pd
 
     generator = LlamaGenerator()
-    NUM_BASE = 10
+    NUM_BASE = 250
     DISCLOSURE_TOKEN = "[AI-DISCLOSED]"
 
     # --- PHASE 1: GENERATE BASE RESUMES ---
@@ -162,6 +162,6 @@ Please rewrite this resume using simple, functional English:
 
     # --- PHASE 4: FINAL SAVE ---
     df = pd.DataFrame(dataset)
-    output_path = "test_llama_minimal_pairs.csv"
+    output_path = "llama_minimal_pairs.csv"
     df.to_csv(output_path, index=False)
     print(f"✅ Finished! {len(df)} samples saved to {output_path}")
